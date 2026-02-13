@@ -12,31 +12,16 @@ By combining deep learning models for each modality and integrating them into a 
 
 📂 Repository Structure
 multimodal_emotion_recognition/
-├── data/                # Raw datasets (external, not versioned)
-│   ├── speech/          # Speech/audio data
-│   ├── text/            # Text transcripts
-│   └── fusion/          # Preprocessed multimodal data
-├── src/                 # Core source code
-│   ├── preprocessing/   # Data cleaning & feature extraction
-│   ├── models/          # Model architectures
-│   │   ├── speech_pipeline/
-│   │   ├── text_pipeline/
-│   │   └── fusion_model/
-│   ├── training/        # Training scripts
-│   ├── evaluation/      # Evaluation scripts & metrics
-│   └── visualization/   # PCA/t-SNE plots, embedding analysis
-├── Results/             # Deliverables (Git LFS tracked models)
-│   ├── speech_model.pth
-│   ├── text_model.safetensors
-│   └── fusion_model.pth
-├── metrics/             # Accuracy tables, confusion matrices
-├── plots/               # Graphs, PCA/t-SNE visualizations
-├── reports/             # Final evaluation reports
-├── configs/             # Experiment configs (YAML/JSON)
-├── requirements.txt     # Python dependencies
-├── README.md            # Project documentation
-└── .gitignore           # Ignore rules for clean repo
-
+├── src/
+├── models/
+├── Results/
+├── configs/
+├── metrics/
+├── plots/
+├── reports/
+├── requirements.txt
+├── README.md
+└── .gitignore
 
 ⚙️ Installation
 Clone the repository and set up the environment:
@@ -48,6 +33,24 @@ source .venv/bin/activate   # On Linux/Mac
 .venv\Scripts\activate      # On Windows
 
 pip install -r requirements.txt
+
+## 📂 Datasets
+This project uses the **Toronto Emotional Speech Set (TESS)** dataset, available on Kaggle:
+
+- [Toronto Emotional Speech Set (TESS)] (https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess)
+
+The dataset contains speech samples along with corresponding transcripts and emotion labels.
+
+### Setup
+1. Download the dataset from Kaggle.
+2. Place it in the `data/`
+3. Run preprocessing scripts:
+```bash
+python src/preprocessing/preprocess_speech.py
+python src/preprocessing/preprocess_text.pyRun preprocessing scripts:
+```bash
+python src/preprocessing/preprocess_speech.py
+python src/preprocessing/preprocess_text.py
 
 
 📊 Usage
@@ -81,3 +84,4 @@ git lfs pull
 Satwik Rakhelkar
 Final‑year Electronics & Communication Engineering student, Matrusri Engineering College.
 Internship experience at ISRO and Vishwam.AI, with expertise in AI/ML, robotics, and embedded systems.
+
