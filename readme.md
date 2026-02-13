@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Multimodal Emotion Recognition
 
 ## 📌 Overview
@@ -82,3 +83,6 @@ Internship experience at ISRO and Vishwam.AI, with expertise in AI/ML, robotics,
 
 
 
+=======
+
+>>>>>>> 8d95897 (Add final report, README, requirements, and results)
