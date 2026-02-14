@@ -76,12 +76,11 @@ python src/models/fusion_pipeline/test.py --model Results/fusion_model.pth
 
 ## 📈 Results
 Performance on held‑out test sets:
-
-Model Variant        Accuracy    Notes
-------------------------------------------------------------
-Speech-only           15.38%      Poor convergence, weak classification
-Text-only             28.57%      Undertrained, limited contextual learning
-Fusion (Speech+Text)  100.00%     Perfect separation, strong multimodal benefit
+| Scenario   | Embedding Dim | Hidden Dim | Epochs | Perplexity | Notes                                      |
+|------------|---------------|------------|--------|------------|--------------------------------------------|
+| Speech     | CNN + LSTM    | Spectrogram | Few    | High       | Accuracy 15.38% → poor convergence          |
+| Text       | BERT          | Transformer | Minimal| Moderate   | Accuracy 28.57% → undertrained, weak context|
+| Fusion     | Concat (Speech+Text) | Joint FC | Adequate| Low        | Accuracy 100% → perfect separation, strong fusion |
 
 - Accuracy tables and error analysis are available in Results/.
 - Confusion matrices and metrics are in metrics/.
@@ -106,6 +105,7 @@ git lfs pull
 Satwik Rakhelkar
 Final‑year Electronics & Communication Engineering student, Matrusri Engineering College.
 Internship experience at ISRO and Vishwam.AI, with expertise in AI/ML, robotics, and embedded systems.
+
 
 
 
