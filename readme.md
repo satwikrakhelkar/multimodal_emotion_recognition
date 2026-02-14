@@ -28,7 +28,7 @@ Dataset: Toronto Emotional Speech Set (TESS)
 • 	 → Dependencies
 • 	 → Setup instructions, usage, repo overview
 
-⚙️ Installation
+## ⚙️ Installation
 Clone the repository and set up the environment:
 git clone https://github.com/satwikrakhelkar/multimodal_emotion_recognition.git
 cd multimodal_emotion_recognition
@@ -60,7 +60,7 @@ python src/preprocessing/preprocess_speech.py
 python src/preprocessing/preprocess_text.py
 
 
-##📊 Usage
+## 📊 Usage
 Speech‑only pipeline:
 python src/models/speech_pipeline/train.py
 python src/models/speech_pipeline/test.py
@@ -74,7 +74,7 @@ python src/models/fusion_pipeline/train.py --config configs/fusion.yaml
 python src/models/fusion_pipeline/test.py --model Results/fusion_model.pth
 
 
-##📈 Results
+## 📈 Results
 Performance on held‑out test sets:
 
 Model Variant        Accuracy    Notes
@@ -106,6 +106,7 @@ git lfs pull
 Satwik Rakhelkar
 Final‑year Electronics & Communication Engineering student, Matrusri Engineering College.
 Internship experience at ISRO and Vishwam.AI, with expertise in AI/ML, robotics, and embedded systems.
+
 
 
 
