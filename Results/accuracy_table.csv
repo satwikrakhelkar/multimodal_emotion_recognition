@@ -1,0 +1,4 @@
+Pipeline,Accuracy (%)
+Speech-only,15.38
+Text-only,28.57
+Fusion (Speech+Text),100.00
