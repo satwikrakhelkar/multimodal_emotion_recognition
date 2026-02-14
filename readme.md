@@ -17,50 +17,39 @@ Dataset: [Toronto Emotional Speech Set (TESS)](https://www.kaggle.com/)
 • 	Visualization tools: Embedding analysis with PCA/t‑SNE for interpretability.
 • 	Reproducible setup: Dependencies tracked in , large models managed via Git LFS.
 
-📂 Repository Structure
-multimodal_emotion_recognition/
-│
-├── project/
-│   ├── models/
-│   │   ├── speech_pipeline/
-│   │   │   ├── train.py        # Training script for speech-only model
-│   │   │   ├── test.py         # Testing script for speech-only model
-│   │   │
-│   │   ├── text_pipeline/
-│   │   │   ├── train.py        # Training script for text-only model
-│   │   │   ├── test.py         # Testing script for text-only model
-│   │   │
-│   │   ├── fusion_pipeline/
-│   │   │   ├── train.py        # Training script for multimodal fusion model
-│   │   │   ├── test.py         # Testing script for multimodal fusion model
-│   │
-│   ├── preprocessing/
-│   │   ├── speech_preprocess.py  # Silence trimming, resampling
-│   │   ├── text_preprocess.py    # Tokenization, cleaning
-│   │
-│   ├── feature_extraction/
-│   │   ├── speech_features.py    # MFCCs, spectrograms, embeddings
-│   │   ├── text_features.py      # Word embeddings, contextual vectors
-│   │
-│   ├── utils/
-│   │   ├── dataset_loader.py     # Load TESS dataset
-│   │   ├── visualization.py      # t-SNE/PCA plots for embeddings
-│   │   ├── metrics.py            # Accuracy, confusion matrix
-│
-├── Results/
-│   ├── speech_results.csv        # Accuracy table for speech-only
-│   ├── text_results.csv          # Accuracy table for text-only
-│   ├── fusion_results.csv        # Accuracy table for multimodal
-│   ├── error_analysis.md         # Document 3–5 failure cases
-│   ├── visualizations/           # Plots of emotion clusters
-│
-├── Report/
-│   ├── Assignment2_Report.pdf    # Final report with architectures, experiments, analysis
-│   ├── figures/                  # Any diagrams/plots used in report
-│
-├── requirements.txt              # All dependencies (torch, librosa, transformers, etc.)
-├── README.md                     # Setup instructions, usage, repo overview
-├── LICENSE
+📂 Repo Skeleton (Bullet Style)
+• 	project/
+• 	models/
+• 	speech_pipeline/
+• 	 → Training script for speech-only model
+• 	 → Testing script for speech-only model
+• 	text_pipeline/
+• 	 → Training script for text-only model
+• 	 → Testing script for text-only model
+• 	fusion_pipeline/
+• 	 → Training script for multimodal fusion model
+• 	 → Testing script for multimodal fusion model
+• 	preprocessing/
+• 	 → Silence trimming, resampling
+• 	 → Tokenization, cleaning
+• 	feature_extraction/
+• 	 → MFCCs, spectrograms, embeddings
+• 	 → Word embeddings, contextual vectors
+• 	utils/
+• 	 → Load TESS dataset
+• 	 → t-SNE/PCA plots for embeddings
+• 	 → Accuracy, confusion matrix
+• 	Results/
+• 	 → Accuracy table for speech-only
+• 	 → Accuracy table for text-only
+• 	 → Accuracy table for multimodal
+• 	 → Document 3–5 failure cases
+• 	visualizations/ → Plots of emotion clusters
+• 	Report/
+• 	 → Final report with architectures, experiments, analysis
+• 	figures/ → Any diagrams/plots used in report
+• 	 → Dependencies (torch, librosa, transformers, etc.)
+• 	 → Setup instructions, usage, repo overview	
 
 ⚙️ Installation
 Clone the repository and set up the environment:
@@ -140,6 +129,7 @@ git lfs pull
 Satwik Rakhelkar
 Final‑year Electronics & Communication Engineering student, Matrusri Engineering College.
 Internship experience at ISRO and Vishwam.AI, with expertise in AI/ML, robotics, and embedded systems.
+
 
 
 
