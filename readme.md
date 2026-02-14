@@ -1,4 +1,7 @@
-Multimodal Emotion Recognition
+                                                                                                                                   
+                                                                                                                                 Multimodal Emotion Recognition
+                                                                                                                                 
+                                                                                                                                 
 📌 Overview
 This project implements a multimodal emotion recognition pipeline that fuses speech, text, and visual modalities to classify human emotions.
 By combining deep learning models for each modality and integrating them into a fusion model, the system achieves improved accuracy and robustness.
@@ -101,5 +104,6 @@ git lfs pull
 Satwik Rakhelkar
 Final‑year Electronics & Communication Engineering student, Matrusri Engineering College.
 Internship experience at ISRO and Vishwam.AI, with expertise in AI/ML, robotics, and embedded systems.
+
 
 
