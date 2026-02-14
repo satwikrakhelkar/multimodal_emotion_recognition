@@ -45,25 +45,42 @@ The dataset contains speech samples along with corresponding transcripts and emo
 1. Download the dataset from Kaggle.
 2. Place it in the `data/`
 3. Run preprocessing scripts:
-```bash
+   
+run:
 python src/preprocessing/preprocess_speech.py
 python src/preprocessing/preprocess_text.pyRun preprocessing scripts:
-```bash
+
+run:
 python src/preprocessing/preprocess_speech.py
 python src/preprocessing/preprocess_text.py
 
 
 📊 Usage
-Train and evaluate the fusion model:
-python src/train_fusion.py --config configs/fusion.yaml
+Speech‑only pipeline:
+python src/models/speech_pipeline/train.py
+python src/models/speech_pipeline/test.py
 
-Run evaluation and generate results:
-python src/evaluate.py --model Results/fusion_model.pth
+Text‑only pipeline:
+python src/models/text_pipeline/train.py
+python src/models/text_pipeline/test.py
+
+Fusion pipeline:
+python src/models/fusion_pipeline/train.py --config configs/fusion.yaml
+python src/models/fusion_pipeline/test.py --model Results/fusion_model.pth
 
 
 📈 Results
-• 	Accuracy tables and error analysis are available in .
-• 	Embedding visualizations (PCA/t‑SNE) provide insights into modality fusion.
+Performance on held‑out test sets:
+
+Model Variant        Accuracy    Notes
+------------------------------------------------------------
+Speech-only          15.38%      Poor convergence, weak classification
+Text-only            28.57%      Undertrained, limited contextual learning
+Fusion (Speech+Text) 100.00%     Perfect separation, strong multimodal benefit
+
+- Accuracy tables and error analysis are available in Results/.
+- Confusion matrices and metrics are in metrics/.
+- PCA/t‑SNE plots are in plots/.
 
 🛠️ Tech Stack
 • 	Python 3.9+
@@ -84,4 +101,5 @@ git lfs pull
 Satwik Rakhelkar
 Final‑year Electronics & Communication Engineering student, Matrusri Engineering College.
 Internship experience at ISRO and Vishwam.AI, with expertise in AI/ML, robotics, and embedded systems.
+
 
