@@ -1,10 +1,14 @@
-                                                                                                                                   
-                                                                                                                                 Multimodal Emotion Recognition
-                                                                                                                                 
-                                                                                                                                 
-📌 Overview
-This project implements a multimodal emotion recognition pipeline that fuses speech, text, and visual modalities to classify human emotions.
-By combining deep learning models for each modality and integrating them into a fusion model, the system achieves improved accuracy and robustness.
+                                                                                                                         # Multimodal Emotion Recognition
+
+## 📌 Objective
+This project implements emotion recognition using:
+- Speech-only pipeline
+- Text-only pipeline
+- Multimodal fusion pipeline (speech + text)
+
+Dataset: [Toronto Emotional Speech Set (TESS)](https://www.kaggle.com/)
+
+
 
 🚀 Features
 • 	Speech pipeline: Extracts acoustic features and classifies emotional tone.
@@ -15,16 +19,48 @@ By combining deep learning models for each modality and integrating them into a 
 
 📂 Repository Structure
 multimodal_emotion_recognition/
-├── src/
-├── models/
+│
+├── project/
+│   ├── models/
+│   │   ├── speech_pipeline/
+│   │   │   ├── train.py        # Training script for speech-only model
+│   │   │   ├── test.py         # Testing script for speech-only model
+│   │   │
+│   │   ├── text_pipeline/
+│   │   │   ├── train.py        # Training script for text-only model
+│   │   │   ├── test.py         # Testing script for text-only model
+│   │   │
+│   │   ├── fusion_pipeline/
+│   │   │   ├── train.py        # Training script for multimodal fusion model
+│   │   │   ├── test.py         # Testing script for multimodal fusion model
+│   │
+│   ├── preprocessing/
+│   │   ├── speech_preprocess.py  # Silence trimming, resampling
+│   │   ├── text_preprocess.py    # Tokenization, cleaning
+│   │
+│   ├── feature_extraction/
+│   │   ├── speech_features.py    # MFCCs, spectrograms, embeddings
+│   │   ├── text_features.py      # Word embeddings, contextual vectors
+│   │
+│   ├── utils/
+│   │   ├── dataset_loader.py     # Load TESS dataset
+│   │   ├── visualization.py      # t-SNE/PCA plots for embeddings
+│   │   ├── metrics.py            # Accuracy, confusion matrix
+│
 ├── Results/
-├── configs/
-├── metrics/
-├── plots/
-├── reports/
-├── requirements.txt
-├── README.md
-└── .gitignore
+│   ├── speech_results.csv        # Accuracy table for speech-only
+│   ├── text_results.csv          # Accuracy table for text-only
+│   ├── fusion_results.csv        # Accuracy table for multimodal
+│   ├── error_analysis.md         # Document 3–5 failure cases
+│   ├── visualizations/           # Plots of emotion clusters
+│
+├── Report/
+│   ├── Assignment2_Report.pdf    # Final report with architectures, experiments, analysis
+│   ├── figures/                  # Any diagrams/plots used in report
+│
+├── requirements.txt              # All dependencies (torch, librosa, transformers, etc.)
+├── README.md                     # Setup instructions, usage, repo overview
+├── LICENSE
 
 ⚙️ Installation
 Clone the repository and set up the environment:
@@ -104,6 +140,7 @@ git lfs pull
 Satwik Rakhelkar
 Final‑year Electronics & Communication Engineering student, Matrusri Engineering College.
 Internship experience at ISRO and Vishwam.AI, with expertise in AI/ML, robotics, and embedded systems.
+
 
 
 
