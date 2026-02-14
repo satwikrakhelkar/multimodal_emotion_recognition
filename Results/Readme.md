@@ -31,14 +31,9 @@ See [`error_analysis.md`](error_analysis.md) for detailed notes on:
 
 The following plots illustrate the separability of emotion clusters using learned embeddings:
 
-### 1. Temporal Modelling (Speech)
-![Temporal Embeddings](temporal_tsne.png)
-
-### 2. Contextual Modelling (Text)
-![Contextual Embeddings](contextual_tsne.png)
-
-### 3. Fusion (Speech + Text)
-![Fusion Embeddings](fusion_tsne.png)
+![Temporal Embeddings](Results/visualizations/temporal_tsne.png)
+![Contextual Embeddings](Results/visualizations/contextual_tsne.png)
+![Fusion Embeddings](Results/visualizations/fusion_tsne.png)
 
 **Observations:**
 - Anger & Happiness → clear separation.
